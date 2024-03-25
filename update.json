@@ -1,7 +1,6 @@
 {
   "version":"1.1.1",
-  "proxy":"https://mirror.ghproxy.com",
-  "apk":"https://github.com/YYDS678/uzVideo/apk/",
-  "ipa":"https://github.com/YYDS678/uzVideo/ipa/"
+  "apk":"https://mirror.ghproxy.com/https://github.com/YYDS678/uzVideo/raw/main/apk/uz影视_1.1.1.apk",
+  "ipa":"https://mirror.ghproxy.com/https://github.com/YYDS678/uzVideo/raw/main/ipa/uz影视_1.1.1.ipa"
 }
 
