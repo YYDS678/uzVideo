@@ -1,4 +1,7 @@
 {
   "version":"1.1.1",
-  "url":"",
+  "proxy":"https://mirror.ghproxy.com",
+  "apk":"https://github.com/YYDS678/uzVideo/apk/",
+  "ipa":"https://github.com/YYDS678/uzVideo/ipa/"
 }
+
