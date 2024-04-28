@@ -1,0 +1,30 @@
+[
+    {
+        "name": "量子源",
+        "api": "https://cj.lzcaiji.com/api.php/provide/vod/at/json"
+    },
+    {
+        "name": "海外看",
+        "api": "https://haiwaikan.com/api.php/provide/vod"
+    },
+    {
+        "name": "1080源",
+        "api": "https://api.1080zyku.com/inc/apijson.php"
+    },
+    {
+        "name": "非凡源",
+        "api": "https://cj.ffzyapi.com/api.php/provide/vod"
+    },
+    {
+        "name": "金鹰源",
+        "api": "https://jyzyapi.com/provide/vod/atjson"
+    },
+    {
+        "name": "ikun源",
+        "api": "https://ikunzyapi.com/api.php/provide/vod"
+    },
+    {
+        "name": "u酷源",
+        "api": "https://api.ukuapi.com/api.php/provide/vod"
+    }
+]

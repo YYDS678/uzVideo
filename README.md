@@ -4,5 +4,5 @@
 
 **iOS & Android**
 
-- 频道 t.me/uzvideoplay
-- 群组 t.me/uzVideoApp
+- 频道 [t.me/uzvideoplay](https://t.me/uzvideoplay)
+- 群组 [t.me/uzVideoApp](https://t.me/uzVideoApp)
