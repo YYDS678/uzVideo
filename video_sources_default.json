@@ -1,30 +1,266 @@
 [
     {
-        "name": "量子源",
+        "name": "🔵乐事源",
+        "api": "https://leshiapi.com/api.php/provide/vod/at/json/"
+    },
+    {
+        "name": "🔵量子源",
         "api": "https://cj.lzcaiji.com/api.php/provide/vod/at/json"
     },
     {
-        "name": "海外看",
+        "name": "🔵海外看",
         "api": "https://haiwaikan.com/api.php/provide/vod"
     },
     {
-        "name": "1080源",
+        "name": "🔵1080源",
         "api": "https://api.1080zyku.com/inc/apijson.php"
     },
     {
-        "name": "非凡源",
+        "name": "🔵非凡源",
         "api": "https://cj.ffzyapi.com/api.php/provide/vod"
     },
     {
-        "name": "金鹰源",
-        "api": "https://jyzyapi.com/provide/vod/atjson"
-    },
-    {
-        "name": "ikun源",
+        "name": "🔵ikun源",
         "api": "https://ikunzyapi.com/api.php/provide/vod"
     },
     {
-        "name": "u酷源",
+        "name": "🔵u酷源",
         "api": "https://api.ukuapi.com/api.php/provide/vod"
+    },
+    {
+        "name": "🔵魔都资源（动漫）",
+        "api": "https://caiji.moduapi.cc/api.php/provide/vod"
+    },
+    {
+        "name": "🔵量子资源",
+        "api": "https://cj.lziapi.com/api.php/provide/vod"
+    },
+    {
+        "name": "🔵量子资源(lzm3u8)",
+        "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/"
+    },
+    {
+        "name": "🔵360资源1",
+        "api": "https://360zy.com/api.php/seaxml/vod"
+    },
+    {
+        "name": "🔵360资源2",
+        "api": "https://360zy.com/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵艾旦资源",
+        "api": "https://lovedan.net/api.php/provide/vod"
+    },
+    {
+        "name": "🔵爱坤资源json",
+        "api": "https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/at/json/"
+    },
+    {
+        "name": "🔵飞速资源2",
+        "api": "http://fszy1.com/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵飞速资源3",
+        "api": "https://m3u8.feisuzyapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵1080资源",
+        "api": "https://api.1080zyku.com/inc/api_mac10.php"
+    },
+    {
+        "name": "🔵优质资源库",
+        "api": "https://api.1080zyku.com/inc/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵索尼资源",
+        "api": "https://suoniapi.com/api.php/provide/vod"
+    },
+    {
+        "name": "🔵天空资源",
+        "api": "https://api.tiankongapi.com/api.php/provide/vod"
+    },
+    {
+        "name": "🔵天空资源1",
+        "api": "https://m3u8.tiankongapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵天空资源(tkm3u8)",
+        "api": "https://m3u8.tiankongapi.com/api.php/provide/vod/from/tkm3u8/"
+    },
+    {
+        "name": "🔵非凡资源",
+        "api": "http://cj.ffzyapi.com/api.php/provide/vod"
+    },
+    {
+        "name": "🔵极速资源",
+        "api": "https://jszyapi.com/api.php/provide/vod"
+    },
+    {
+        "name": "🔵光速资源",
+        "api": "https://api.guangsuapi.com/api.php/provide/vod"
+    },
+    {
+        "name": "🔵光速资源(gsm3u8)",
+        "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/"
+    },
+    {
+        "name": "🔵卧龙资源",
+        "api": "https://collect.wolongzyw.com/api.php/provide/vod"
+    },
+    {
+        "name": "🔵快车资源",
+        "api": "https://caiji.kczyapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵快车资源(kcm3u8)",
+        "api": "https://caiji.kczyapi.com/api.php/provide/vod/from/kcm3u8/"
+    },
+    {
+        "name": "🔵樱花资源",
+        "api": "https://m3u8.apiyhzy.com/api.php/provide/vod"
+    },
+    {
+        "name": "🔵华为资源",
+        "api": "https://hw8.live/api.php/provide/vod"
+    },
+    {
+        "name": "🔵飘零资源",
+        "api": "https://p2100.net/api.php/provide/vod"
+    },
+    {
+        "name": "🔵暴风资源",
+        "api": "https://bfzyapi.com/api.php/provide/vod"
+    },
+    {
+        "name": "🔵八戒资源(php)",
+        "api": "http://cj.bajiecaiji.com/inc/apijson_vod.php"
+    },
+    {
+        "name": "🔵百度资源",
+        "api": "https://api.apibdzy.com/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵影图资源",
+        "api": "https://cj.vodimg.top/api.php/provide/vod"
+    },
+    {
+        "name": "🔵神马资源",
+        "api": "https://img.smdyw.top/api.php/provide/vod"
+    },
+    {
+        "name": "🔵速播资源",
+        "api": "https://subocaiji.com/api.php/provide/vod"
+    },
+    {
+        "name": "🔵红牛资源",
+        "api": "https://www.hongniuzy2.com/api.php/provide/vod"
+    },
+    {
+        "name": "🔵红牛资源(hnm3u8)",
+        "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/"
+    },
+    {
+        "name": "🔵火狐资源",
+        "api": "https://hhzyapi.com/api.php/provide/vod"
+    },
+    {
+        "name": "🔵新浪资源",
+        "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod"
+    },
+    {
+        "name": "🔵虎牙资源",
+        "api": "https://www.huyaapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵快看资源",
+        "api": "https://kuaikan-api.com/api.php/provide/vod"
+    },
+    {
+        "name": "🔵无尽资源资源me",
+        "api": "https://api.wujinapi.me/api.php/provide/vod"
+    },
+    {
+        "name": "🔵无尽资源资源net",
+        "api": "https://api.wujinapi.net/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵无尽资源资源com",
+        "api": "https://api.wujinapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵天翼资源",
+        "api": "https://www.911ysw.top/tianyi.php/provide/vod/"
+    },
+    {
+        "name": "🔵天翼资源(json)",
+        "api": "https://www.911ysw.top/tianyi.php/provide/vod/at/json"
+    },
+    {
+        "name": "🔵39影视",
+        "api": "https://www.39kan.com/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵39影视(json)",
+        "api": "https://www.39kan.com/api.php/provide/vod/at/json/"
+    },
+    {
+        "name": "🔵雨哥哥影视",
+        "api": "http://cj.baozi66.top:66/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵步步高资源(json)",
+        "api": "https://api.yparse.com/api/json"
+    },
+    {
+        "name": "🔵CK资源",
+        "api": "https://ckzy.me/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵最大资源",
+        "api": "https://api.zuidapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵奇虎资源",
+        "api": "https://caiji.qhzyapi.com/api.php/provide/vod"
+    },
+    {
+        "name": "🔵私密影院",
+        "api": "https://simiyy.com/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵鱼乐资源",
+        "api": "https://api.ylzy.me/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵耀协资源",
+        "api": "http://zyz.yxys.top/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵映迷资源",
+        "api": "https://www.inmi.app/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵金鹰资源1",
+        "api": "https://jyzyapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵金鹰资源(jinyingm3u8)",
+        "api": "https://jyzyapi.com/provide/vod/from/jinyingm3u8/"
+    },
+    {
+        "name": "🔵闪电资源",
+        "api": "http://sdzyapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵闪电资源(sdm3u8)",
+        "api": "https://sdzyapi.com/api.php/provide/vod/from/sdm3u8/"
+    },
+    {
+        "name": "🔵飞速资源1",
+        "api": "https://www.feisuzyapi.com/api.php/provide/vod"
+    },
+    {
+        "name": "🔵四九资源",
+        "api": "https://49zyw.com/api.php/provide/vod"
     }
 ]
