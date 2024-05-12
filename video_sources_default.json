@@ -1,7 +1,7 @@
 [
     {
-        "name": "🔵乐事源",
-        "api": "https://leshiapi.com/api.php/provide/vod/at/json/"
+        "name": "🔵阿里源",
+        "api": "http://aliys.cn:90/api.php/provide/vod/"
     },
     {
         "name": "🔵量子源",
