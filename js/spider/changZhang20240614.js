@@ -45,7 +45,7 @@ class ChangZhang20240614 extends WebApiBase {
     } catch (error) {
       backData.error = "获取分类失败～";
     }
-    return backData;
+    return JSON.stringify(backData);
   }
 
   /**
@@ -94,7 +94,7 @@ class ChangZhang20240614 extends WebApiBase {
     } catch (error) {
       backData.error = "获取列表失败～";
     }
-    return backData;
+    return JSON.stringify(backData);
   }
 
   /**
@@ -191,7 +191,7 @@ class ChangZhang20240614 extends WebApiBase {
       backData.error = "获取视频详情失败";
     }
 
-    return backData;
+    return JSON.stringify(backData);
   }
 
   /**
@@ -276,7 +276,7 @@ class ChangZhang20240614 extends WebApiBase {
     } catch (error) {
       backData.error = "获取视频播放地址失败";
     }
-    return backData;
+    return JSON.stringify(backData);
   }
 
   /**
@@ -310,7 +310,7 @@ class ChangZhang20240614 extends WebApiBase {
     //       .querySelector(".bt_img.mi_ne_kd.search_list")
     //       ?.querySelectorAll("ul > li") ?? [];
     // }
-    return backData;
+    return JSON.stringify(backData);
   }
 
   ignoreClassName = ["关于", "公告", "官方", "备用", "群", "地址"];
