@@ -1,4 +1,4 @@
-# uz 影视
+# uz影视
 
 **追剧、直播、无广、投屏、免费**
 
@@ -18,6 +18,7 @@
 [脚本源](https://mirror.ghproxy.com/https://raw.githubusercontent.com/YYDS678/uzVideo/main/js/spider_sources.json)
 
 # 编写 uz 可执行的脚本
-https://github.com/YYDS678/uzVideo/tree/main/js
+
+<https://github.com/YYDS678/uzVideo/tree/main/js>
 
 # 如有任何相关问题联系：[机器人](https://t.me/uzVideoAppbot)
