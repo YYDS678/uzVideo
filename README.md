@@ -14,3 +14,10 @@
 [IPTV 大佬 YueChan，已经内置](https://github.com/YueChan/Live)
 
 [色色源](https://mirror.ghproxy.com/https://raw.githubusercontent.com/YYDS678/uzVideo/main/video_sources_sese.json)
+
+[脚本源](https://mirror.ghproxy.com/https://raw.githubusercontent.com/YYDS678/uzVideo/main/js/spider_sources.json)
+
+# 编写 uz 可执行的脚本
+https://github.com/YYDS678/uzVideo/tree/main/js
+
+# 如有任何相关问题联系：[机器人](https://t.me/uzVideoAppbot)

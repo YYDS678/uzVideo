@@ -7116,7 +7116,6 @@ class VideoClass {
   }
 }
 
-
 /**
  * 视频详情
  */
@@ -7234,44 +7233,44 @@ class WebApiBase {
   /**
    * 异步获取分类列表的方法。
    * @param {UZArgs} args
-   * @returns {Promise<RepVideoClassList>}
+   * @returns {@Promise<JSON.stringify(new RepVideoClassList())>}
    */
   async getClassList(args) {
-    return new RepVideoClassList();
+    return JSON.stringify(new RepVideoClassList());
   }
 
   /**
    * 获取分类视频列表
    * @param {UZArgs} args
-   * @returns {Promise<RepVideoList>}
+   * @returns {@Promise<JSON.stringify(new RepVideoList())>}
    */
   async getVideoList(args) {
-    return new RepVideoList();
+    return JSON.stringify(new RepVideoList());
   }
 
   /**
    * 获取视频详情
    * @param {UZArgs} args
-   * @returns {Promise<RepVideoDetail>}
+   * @returns {@Promise<JSON.stringify(new RepVideoDetail())>}
    */
   async getVideoDetail(args) {
-    return new RepVideoDetail();
+    return JSON.stringify(new RepVideoDetail());
   }
   /**
    * 获取视频的播放地址
    * @param {UZArgs} args
-   * @returns {Promise<RepVideoPlayUrl>}
+   * @returns {@Promise<JSON.stringify(new RepVideoPlayUrl())>}
    */
   async getVideoPlayUrl(args) {
-    return new RepVideoPlayUrl();
+    return JSON.stringify(new RepVideoPlayUrl());
   }
   /**
    * 搜索视频
    * @param {UZArgs} args
-   * @returns {Promise<RepVideoList>}
+   * @returns {@Promise<JSON.stringify(new RepVideoList())>}
    */
   async searchVideo(args) {
-    return new RepVideoList();
+    return JSON.stringify(new RepVideoList());
   }
 }
 
@@ -7298,19 +7297,19 @@ async function req(url, options) {
   return pro;
 }
 
-
-
 class UZUtils {
   static getHostFromURL(url) {
-    const protocolEndIndex = url.indexOf('://');
+    const protocolEndIndex = url.indexOf("://");
     if (protocolEndIndex === -1) {
       return null;
     }
-  
     const hostStartIndex = protocolEndIndex + 3;
-    const hostEndIndex = url.indexOf('/', hostStartIndex);
-    const host = hostEndIndex === -1 ? url.slice(hostStartIndex) : url.slice(hostStartIndex, hostEndIndex);
-  
+    const hostEndIndex = url.indexOf("/", hostStartIndex);
+    const host =
+      hostEndIndex === -1
+        ? url.slice(hostStartIndex)
+        : url.slice(hostStartIndex, hostEndIndex);
+
     return `${url.slice(0, protocolEndIndex + 3)}${host}`;
   }
 }
