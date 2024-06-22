@@ -3,8 +3,9 @@ import { WebApiBase, VideoClass } from "../core/uzCode.js";
 import { parse } from "node-html-parser";
 // ignore
 
+// 类名要特殊
 class ChangZhang20240614 extends WebApiBase {
-  webSite = "https://www.czys.top";
+  webSite = "https://www.czzy77.com";
   /**
    * 异步获取分类列表的方法。
    * @param {UZArgs} args
@@ -13,7 +14,7 @@ class ChangZhang20240614 extends WebApiBase {
   async getClassList(args) {
     let webUrl = args.url;
     // 如果通过首页获取分类的话，可以将对象内部的首页更新
-    this.webSite = this.removeTrailingSlash(webUrl);
+    this.webSite = UZUtils.removeTrailingSlash(webUrl);
     var backData = new RepVideoClassList();
     try {
       const pro = await req(webUrl);
@@ -54,7 +55,7 @@ class ChangZhang20240614 extends WebApiBase {
    * @returns {Promise<RepVideoList>}
    */
   async getVideoList(args) {
-    var listUrl = this.removeTrailingSlash(args.url) + "/page/" + args.page;
+    var listUrl = UZUtils.removeTrailingSlash(args.url) + "/page/" + args.page;
     var backData = new RepVideoClassList();
     try {
       let pro = await req(listUrl, null);
@@ -356,12 +357,6 @@ class ChangZhang20240614 extends WebApiBase {
     }
     return false;
   }
-
-  removeTrailingSlash(str) {
-    if (str.endsWith("/")) {
-      return str.slice(0, -1);
-    }
-    return str;
-  }
 }
+// json 中 instance 的值，这个名称一定要特殊
 var changZhang20240614 = new ChangZhang20240614();
