@@ -20,8 +20,12 @@ class VideoDetail {
     // 视频名称
     this.vod_name = "";
     /**
-     * 所有剧集
-     * 第一集$第一集的视频详情链接#第二集$第二集的视频详情链接
+     * 线路列表 (没什么特殊区别可为空) 线路1$$$线路2$$$
+     */
+    this.vod_play_from = "";
+    /**
+     * 所有剧集 使用 $$$ 分割线路，# 分割剧集，$ 分割剧集名称和剧集链接
+     * 第一集$第一集的视频详情链接#第二集$第二集的视频详情链接$$$第一集$第一集的视频详情链接#第二集$第二集的视频详情链接
      */
     this.vod_play_url = "";
     // 封面
@@ -182,7 +186,8 @@ class ProData {
 
 /**
  * 网络请求，也可以使用 fetch
- * @param {UZArgs} args
+ * @param {string} url 请求的URL
+ * @param {object} options 请求参数 {headers:{},method:"POST",data:{}}
  * @returns {Promise<ProData>}
  */
 async function req(url, options) {
