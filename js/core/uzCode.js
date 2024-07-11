@@ -48,6 +48,8 @@ class VideoDetail {
     this.vod_content = "";
     // 地区
     this.vod_area = "";
+    // 夸克网盘链接
+    this.quarkUrl = "";
   }
 }
 
@@ -65,28 +67,16 @@ class RepVideoClassList {
 }
 
 /**
- * 视频列表
- */
-class VideoList {
-  constructor() {
-    /**
-     * @type {VideoDetail[]}
-     */
-    this.data = [];
-    this.total = 0;
-  }
-}
-
-/**
  * 返回视频列表
  */
 class RepVideoList {
   constructor() {
     /**
-     * @type {VideoList}
+     * @type {VideoDetail[]}
      */
     this.data = null;
     this.error = "";
+    this.total = 0;
   }
 }
 
@@ -181,6 +171,14 @@ class ProData {
   constructor() {
     this.error = "";
     this.data;
+    /**
+     * @type {object} 响应头
+     */
+    this.headers;
+    /**
+     * @type {number} 状态码
+     */
+    this.code;
   }
 }
 
@@ -196,45 +194,4 @@ async function req(url, options) {
     JSON.stringify({ url: url, options: options })
   );
   return pro;
-}
-
-class UZUtils {
-  /**
-   * 从链接中获取域名
-   * @param {string} url
-   * @returns
-   */
-  static getHostFromURL(url) {
-    const protocolEndIndex = url.indexOf("://");
-    if (protocolEndIndex === -1) {
-      return null;
-    }
-    const hostStartIndex = protocolEndIndex + 3;
-    const hostEndIndex = url.indexOf("/", hostStartIndex);
-    const host =
-      hostEndIndex === -1
-        ? url.slice(hostStartIndex)
-        : url.slice(hostStartIndex, hostEndIndex);
-
-    return `${url.slice(0, protocolEndIndex + 3)}${host}`;
-  }
-
-  /**
-   * 去除尾部的斜杠
-   * @param {string} str
-   * @returns
-   */
-  static removeTrailingSlash(str) {
-    if (str.endsWith("/")) {
-      return str.slice(0, -1);
-    }
-    return str;
-  }
-
-  /**
-   * 用于在 uz 脚本调试模式中展示 log 信息
-   */
-  static debugLog() {
-    sendMessage("debugLog", JSON.stringify([...arguments]));
-  }
 }
