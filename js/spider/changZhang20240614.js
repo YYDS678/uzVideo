@@ -56,7 +56,7 @@ class ChangZhang20240614 extends WebApiBase {
    */
   async getVideoList(args) {
     var listUrl = UZUtils.removeTrailingSlash(args.url) + "/page/" + args.page;
-    var backData = new RepVideoClassList();
+    var backData = new RepVideoList();
     try {
       let pro = await req(listUrl, null);
       backData.error = pro.error;
