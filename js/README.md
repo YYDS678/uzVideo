@@ -18,3 +18,11 @@
 }
 
 ```
+
+# 修改记录
+
+### v1.3.00
+
+1. 去掉 `cat.js`, 更改为 `cheerio` `Crypto` `Encrypt` `parse`
+2. `VideoDetail` 新增 `quarkUrl` 支持夸克网盘
+3. `RepVideoPlayUrl` 新增 `headers` 支持设置播放 `header`
