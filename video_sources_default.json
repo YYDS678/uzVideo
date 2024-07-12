@@ -1,5 +1,13 @@
 [
     {
+        "name": "🔵黑木耳",
+        "api": "https://json.heimuer.xyz/api.php/provide/vod/"
+    },
+    {
+        "name": "🔵华为吧",
+        "api": "https://cjhwba.com/api.php/provide/vod/"
+    },
+    {
         "name": "🔵阿里源",
         "api": "http://aliys.cn:90/api.php/provide/vod/"
     },

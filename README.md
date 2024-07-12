@@ -15,7 +15,7 @@
 
 [色色源](https://mirror.ghproxy.com/https://raw.githubusercontent.com/YYDS678/uzVideo/main/video_sources_sese.json)
 
-[脚本源](https://mirror.ghproxy.com/https://raw.githubusercontent.com/YYDS678/uzVideo/main/js/spider_sources.json)
+[大佬脚本源](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Yswag/uzVideo/main/js/spider_sources.json)
 
 # 编写 uz 可执行的脚本
 
