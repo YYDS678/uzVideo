@@ -99,6 +99,10 @@ class RepVideoDetail {
 class RepVideoPlayUrl {
   constructor() {
     this.data = "";
+    /**
+     * 播放视频的请求header
+     **/
+    this.headers;
     this.error = "";
   }
 }
