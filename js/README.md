@@ -19,10 +19,50 @@
 
 ```
 
+# 脚本运行说明
+
+1. 执行每个方法都会为 `webSite` 进行赋值
+2. 流程图
+
+```mermaid
+
+graph TD
+
+  A[开始] --> A1[uz 调用 getClassList 获取一级分类] -->|返回数据 rep: RepVideoClassList| B[判断 rep.data 列表内 VideoClass 的 hasSubclass 是否为 true]
+
+  B -->|是,存在二级分类或者筛选列表| C[调用 getSubclassList 获取二级分类或筛选列表]
+
+  B -->|否,不存在二级分类| D[调用 getVideoList 获取视频列表]
+
+
+  C --> C1[调用 getSubclassVideoList 获取二级分类视频列表或者筛选视频列表] -->|点击单个视频| E
+
+
+
+  E[调用 getVideoDetail 获取视频详情]
+
+  D -->|点击单个视频| E
+
+  E -->|点击某一集| F[调用 getVideoPlayUrl 获取播放链接]
+
+  F --> G[结束]
+
+  S[搜索] -->S1[调用 searchVideo 返回视频列表] -->|点击单个视频| E
+
+```
+
 # 修改记录
+
+### v1.4.00
+
+1. 增加二级分类和筛选列表功能
 
 ### v1.3.00
 
 1. 去掉 `cat.js`, 更改为 `cheerio` `Crypto` `Encrypt` `parse`
 2. `VideoDetail` 新增 `quarkUrl` 支持夸克网盘
 3. `RepVideoPlayUrl` 新增 `headers` 支持设置播放 `header`
+
+```
+
+```

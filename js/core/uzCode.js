@@ -1,4 +1,31 @@
 /**
+ * 筛选标签
+ */
+class FilterLabel {
+  constructor() {
+    // 筛选名称
+    this.name = "";
+    // 标识参数
+    this.id;
+  }
+}
+
+/**
+ * 筛选标题
+ */
+class FilterTitle {
+  constructor() {
+    // 筛选标题
+    this.name = "";
+    /**
+     * 筛选标签列表
+     * @type {FilterLabel[]}
+     */
+    this.list = [];
+  }
+}
+
+/**
  * 视频分类
  */
 class VideoClass {
@@ -7,6 +34,30 @@ class VideoClass {
     this.type_id = "";
     // 分类名称
     this.type_name = "";
+
+    /**
+     * 是否存在 筛选列表、子分类。 存在会调用 getSubclassList
+     */
+    this.hasSubclass = false;
+  }
+}
+
+/**
+ * 视频二级分类，二级分类可以是 分类，也可以是筛选，都有值优先取筛选
+ */
+class VideoSubclass {
+  constructor() {
+    /**
+     * 子分类
+     * @type {VideoClass[]}
+     */
+    this.class = [];
+    /**
+     * 筛选列表
+     * 请求二级分类列表 getSubclassList 时返回该数据或者 data，
+     * @type {FilterTitle[]}
+     */
+    this.filter = [];
   }
 }
 
@@ -67,6 +118,20 @@ class RepVideoClassList {
 }
 
 /**
+ * 返回二级分类列表(包括筛选列表)
+ */
+class RepVideoSubclassList {
+  constructor() {
+    /**
+     * 二级分类数据
+     * @type {VideoSubclass}
+     */
+    this.data = new VideoSubclass();
+    this.error = "";
+  }
+}
+
+/**
  * 返回视频列表
  */
 class RepVideoList {
@@ -74,7 +139,7 @@ class RepVideoList {
     /**
      * @type {VideoDetail[]}
      */
-    this.data = null;
+    this.data = [];
     this.error = "";
     this.total = 0;
   }
@@ -120,10 +185,36 @@ class UZArgs {
     this.searchWord = "";
   }
 }
+
+/**
+ * getSubclassVideoList 方法传入的参数
+ */
+class UZSubclassVideoListArgs extends UZArgs {
+  constructor() {
+    /**
+     * 主分类ID  即脚本返回的 @type {RepVideoClassList}.data[0].type_id
+     */
+    this.mainClassId = "";
+
+    /**
+     * 二级分类ID 即脚本返回的 @type {RepVideoSubclassList}.data.class.type_id
+     */
+    this.subclassId = "";
+
+    /**
+     * 筛选标签，按返回的顺序传入 即脚本返回的 @type {RepVideoSubclassList}.data.filter.
+     * @type {FilterLabel[]}
+     */
+    this.filter = [];
+  }
+}
+
 /**
  * 脚本基类
  */
 class WebApiBase {
+  // 网站主页
+  webSite = "";
   /**
    * 异步获取分类列表的方法。
    * @param {UZArgs} args
@@ -134,11 +225,29 @@ class WebApiBase {
   }
 
   /**
+   * 获取二级分类列表筛选列表的方法。
+   * @param {UZArgs} args
+   * @returns {@Promise<JSON.stringify(new RepVideoSubclassList())>}
+   */
+  async getSubclassList(args) {
+    return JSON.stringify(new RepVideoSubclassList());
+  }
+
+  /**
    * 获取分类视频列表
    * @param {UZArgs} args
    * @returns {@Promise<JSON.stringify(new RepVideoList())>}
    */
   async getVideoList(args) {
+    return JSON.stringify(new RepVideoList());
+  }
+  
+  /**
+   * 获取二级分类视频列表 或 筛选视频列表
+   * @param {UZSubclassVideoListArgs} args
+   * @returns {@Promise<JSON.stringify(new RepVideoList())>}
+   */
+  async getSubclassVideoList(args) {
     return JSON.stringify(new RepVideoList());
   }
 
