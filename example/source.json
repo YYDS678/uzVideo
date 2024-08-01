@@ -1,0 +1,23 @@
+{
+  "code": 1,
+  "msg": "数据列表",
+  "page": 1,
+  "pagecount": 1,
+  "limit": "20",
+  "total": 1,
+  "list": [
+    {
+      "vod_id": 1,
+      "type_id": 1,
+      "vod_name": "演示视频",
+      "vod_pic": "https://raw.githubusercontent.com/YYDS678/uzVideo/main/example/pic.jpeg",
+      "vod_actor": "暂无",
+      "vod_director": "暂无",
+      "vod_blurb": "暂无",
+      "vod_remarks": "演示",
+      "vod_year": "2024",
+      "vod_play_url": "演示$http://devimages.apple.com.edgekey.net/streaming/examples/bipbop_16x9/gear2/prog_index.m3u8#"
+    }
+  ],
+  "class": [{ "type_id": 1, "type_pid": 0, "type_name": "演示分类" }]
+}
