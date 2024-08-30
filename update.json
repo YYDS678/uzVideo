@@ -1,6 +1,6 @@
 {
-  "version":"1.3.00",
+  "version":"1.5.30",
   "apk":"https://t.me/uzvideoplay",
   "ipa":"https://t.me/uzvideoplay",
-  "update":"# 本次更新\n- 首页增加切换布局\n- 添加源列表自动加入订阅列表\n- iOS画中画修复完善\n- 修复其它部分已知问题"
+  "update":"# 本次更新\n\n- 优化广告过滤\n- 修复扫码输入\n- 修复其它部分已知问题\n\n# 增加群友反馈部分功能\n\n- 优化 win、mac 全屏播放"
 }

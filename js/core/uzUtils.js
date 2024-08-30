@@ -48,7 +48,7 @@ class UZUtils {
   }
 
   /**
-   * 用于在 uz 脚本调试模式中展示 log 信息
+   * 用于在 uz 扩展调试模式中展示 log 信息
    */
   static debugLog() {
     sendMessage("debugLog", JSON.stringify([...arguments]));

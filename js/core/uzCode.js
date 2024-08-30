@@ -192,17 +192,17 @@ class UZArgs {
 class UZSubclassVideoListArgs extends UZArgs {
   constructor() {
     /**
-     * 主分类ID  即脚本返回的 @type {RepVideoClassList}.data[0].type_id
+     * 主分类ID  即扩展返回的 @type {RepVideoClassList}.data[0].type_id
      */
     this.mainClassId = "";
 
     /**
-     * 二级分类ID 即脚本返回的 @type {RepVideoSubclassList}.data.class.type_id
+     * 二级分类ID 即扩展返回的 @type {RepVideoSubclassList}.data.class.type_id
      */
     this.subclassId = "";
 
     /**
-     * 筛选标签，按返回的顺序传入 即脚本返回的 @type {RepVideoSubclassList}.data.filter.
+     * 筛选标签，按返回的顺序传入 即扩展返回的 @type {RepVideoSubclassList}.data.filter.
      * @type {FilterLabel[]}
      */
     this.filter = [];
@@ -210,7 +210,7 @@ class UZSubclassVideoListArgs extends UZArgs {
 }
 
 /**
- * 脚本基类
+ * 扩展基类
  */
 class WebApiBase {
   // 网站主页
