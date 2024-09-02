@@ -79,7 +79,7 @@ class VideoDetail {
      * 第一集$第一集的视频详情链接#第二集$第二集的视频详情链接$$$第一集$第一集的视频详情链接#第二集$第二集的视频详情链接
      */
     this.vod_play_url = "";
-    // 封面
+    // 封面 支持 data:image/xxx;base64,
     this.vod_pic = "";
     // 视频分类
     this.type_name = "";
@@ -99,7 +99,7 @@ class VideoDetail {
     this.vod_content = "";
     // 地区
     this.vod_area = "";
-    // 夸克网盘链接
+    // 夸克网盘链接 暂未实现
     this.quarkUrl = "";
   }
 }
@@ -163,6 +163,9 @@ class RepVideoDetail {
  */
 class RepVideoPlayUrl {
   constructor() {
+    /**
+     * 播放视频的URL 支持 data:xxx/xxx;base64,
+     **/
     this.data = "";
     /**
      * 播放视频的请求header
@@ -241,7 +244,7 @@ class WebApiBase {
   async getVideoList(args) {
     return JSON.stringify(new RepVideoList());
   }
-  
+
   /**
    * 获取二级分类视频列表 或 筛选视频列表
    * @param {UZSubclassVideoListArgs} args
@@ -298,7 +301,7 @@ class ProData {
 /**
  * 网络请求，也可以使用 fetch
  * @param {string} url 请求的URL
- * @param {object} options 请求参数 {headers:{},method:"POST",data:{}}
+ * @param {object} options 请求参数 {headers:{},method:"POST",data:{},responseType:"json"/arraybuffer/bytes/plain/stream}
  * @returns {Promise<ProData>}
  */
 async function req(url, options) {

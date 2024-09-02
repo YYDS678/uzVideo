@@ -22,3 +22,18 @@
 <https://github.com/YYDS678/uzVideo/tree/main/js>
 
 # 如有任何相关问题联系：[机器人](https://t.me/uzVideoAppbot)
+
+# 数据源格式说明
+
+## 采集站源格式
+```
+{
+    "api": "采集地址",
+    "name": "名称",
+    "remark": "备注",
+    "noHistory": false, // *不开启*历史记录 默认false(即开启历史记录)，用户可自行在 app 内修改
+    "userAgent": "", // 设置播放ua，用户可自行在 app 内修改
+    "isLock": false, // 是否上锁 默认false(即不上锁)，用户可自行在 app 内修改
+    "blockClassList": ["短剧"] // 屏蔽分类，用户可自行在 app 内修改
+  }
+```

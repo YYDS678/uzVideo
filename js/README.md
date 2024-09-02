@@ -13,8 +13,12 @@
   "name": "名称",
   "api": "扩展链接",
   "instance": "实例名称",
-  "webSite": "视频站地址。在 app 内用户可自行修改，当加载代码时会赋值给对象的 webSite 属性",
-  "remark": "备注"
+  "webSite": "视频站地址。当加载代码时会赋值给对象的 webSite 属性，用户可自行在 app 内修改",
+  "remark": "备注",
+  "noHistory": false, // *不开启*历史记录 默认false(即开启历史记录)，用户可自行在 app 内修改
+  "userAgent": "", // 设置播放ua 优先级低于 getVideoPlayUrl 返回ua，用户可自行在 app 内修改
+  "isLock": false, // 是否上锁 默认false(即不上锁)，用户可自行在 app 内修改
+  "blockClassList": ["短剧"] // 屏蔽分类，用户可自行在 app 内修改
 }
 
 ```
@@ -53,16 +57,18 @@ graph TD
 
 # 修改记录
 
+### v1.5.40
+
+1. `req` 支持设置 `responseType` 值为字符串 `json、arraybuffer、bytes、plain、stream`
+2. `vod_pic` 支持 data url 格式
+3. `RepVideoPlayUrl.data` 支持 data url 格式
+
 ### v1.4.00
 
 1. 增加二级分类和筛选列表功能
 
 ### v1.3.00
 
-1. 去掉 `cat.js`, 更改为 `cheerio` `Crypto` `Encrypt` `parse`
+1. 去掉 `cat.js`, 更改为 `cheerio` `Crypto` `Encrypt` `parse(后期可能会移除，推荐优先使用 cheerio)`
 2. `VideoDetail` 新增 `quarkUrl` 支持夸克网盘
 3. `RepVideoPlayUrl` 新增 `headers` 支持设置播放 `header`
-
-```
-
-```
