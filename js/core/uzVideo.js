@@ -1,15 +1,29 @@
 /**
+ * @file 视频源扩展
+ */
+
+//MARK: - 筛选标签
+/**
  * 筛选标签
  */
 class FilterLabel {
   constructor() {
-    // 筛选名称
+    /**
+     * 筛选名称
+     */
     this.name = "";
-    // 标识参数
-    this.id;
+    /**
+     * 标识值 根据情况赋值
+     */
+    this.id = "";
+    /**
+     * 标识key 根据情况赋值
+     */
+    this.key = "";
   }
 }
 
+//MARK: - 筛选标题
 /**
  * 筛选标题
  */
@@ -25,6 +39,7 @@ class FilterTitle {
   }
 }
 
+//MARK: - 视频分类
 /**
  * 视频分类
  */
@@ -42,6 +57,7 @@ class VideoClass {
   }
 }
 
+//MARK: - 视频二级分类
 /**
  * 视频二级分类，二级分类可以是 分类，也可以是筛选，都有值优先取筛选
  */
@@ -61,6 +77,7 @@ class VideoSubclass {
   }
 }
 
+//MARK: - 视频详情
 /**
  * 视频详情
  */
@@ -104,6 +121,7 @@ class VideoDetail {
   }
 }
 
+//MARK: - 分类列表数据
 /**
  * 返回分类列表
  */
@@ -117,6 +135,7 @@ class RepVideoClassList {
   }
 }
 
+//MARK: - 二级分类列表/筛选列表数据
 /**
  * 返回二级分类列表(包括筛选列表)
  */
@@ -131,6 +150,7 @@ class RepVideoSubclassList {
   }
 }
 
+//MARK: - 视频列表数据
 /**
  * 返回视频列表
  */
@@ -145,6 +165,7 @@ class RepVideoList {
   }
 }
 
+//MARK: - 视频详情数据
 /**
  * 返回视频详情
  */
@@ -158,6 +179,7 @@ class RepVideoDetail {
   }
 }
 
+//MARK: - 视频播放地址数据
 /**
  * 返回播放地址
  */
@@ -175,6 +197,7 @@ class RepVideoPlayUrl {
   }
 }
 
+//MARK: - 传入参数
 /**
  * UZArgs 封装一组参数，用于构建请求URL或进行数据查询。
  */
@@ -189,6 +212,7 @@ class UZArgs {
   }
 }
 
+//MARK: - 二级分类传入参数
 /**
  * getSubclassVideoList 方法传入的参数
  */
@@ -205,13 +229,14 @@ class UZSubclassVideoListArgs extends UZArgs {
     this.subclassId = "";
 
     /**
-     * 筛选标签，按返回的顺序传入 即扩展返回的 @type {RepVideoSubclassList}.data.filter.
+     * 筛选标签，按返回的顺序传入 即扩展返回的 {RepVideoSubclassList}.data.filter.
      * @type {FilterLabel[]}
      */
     this.filter = [];
   }
 }
 
+//MARK: - 视频源扩展基类
 /**
  * 扩展基类
  */
@@ -278,36 +303,4 @@ class WebApiBase {
   async searchVideo(args) {
     return JSON.stringify(new RepVideoList());
   }
-}
-
-/**
- * req 返回的数据
- */
-class ProData {
-  constructor() {
-    this.error = "";
-    this.data;
-    /**
-     * @type {object} 响应头
-     */
-    this.headers;
-    /**
-     * @type {number} 状态码
-     */
-    this.code;
-  }
-}
-
-/**
- * 网络请求，也可以使用 fetch
- * @param {string} url 请求的URL
- * @param {object} options 请求参数 {headers:{},method:"POST",data:{},responseType:"json"/arraybuffer/bytes/plain/stream}
- * @returns {Promise<ProData>}
- */
-async function req(url, options) {
-  let pro = await sendMessage(
-    "req",
-    JSON.stringify({ url: url, options: options })
-  );
-  return pro;
 }

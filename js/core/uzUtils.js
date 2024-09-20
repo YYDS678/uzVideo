@@ -1,3 +1,7 @@
+/**
+ * @file 工具类
+ */
+
 class UZUtils {
   /**
    * 从链接中获取域名
@@ -54,3 +58,71 @@ class UZUtils {
     sendMessage("debugLog", JSON.stringify([...arguments]));
   }
 }
+
+//MARK: - 网络请求返回数据
+/**
+ * req 返回的数据
+ */
+class ProData {
+  constructor() {
+    this.error = "";
+    this.data;
+    /**
+     * @type {object} 响应头
+     */
+    this.headers;
+    /**
+     * @type {number} 状态码
+     */
+    this.code;
+  }
+}
+
+/**
+ * 请求响应类型
+ */
+const ReqResponseType = {
+  json: "json",
+  arraybuffer: "arraybuffer",
+  bytes: "bytes",
+  plain: "plain",
+  stream: "stream",
+};
+
+//MARK: - 网络请求
+/**
+ * 网络请求
+ * @param {string} url 请求的URL
+ * @param {object} options 请求参数 {headers:{},method:"POST",data:{},responseType:ReqResponseType}
+ * @returns {Promise<ProData>}
+ */
+async function req(url, options) {
+  let pro = await sendMessage(
+    "req",
+    JSON.stringify({ url: url, options: options })
+  );
+  return pro;
+}
+
+// /**
+//  * 展示 toast
+//  */
+// function toast() {
+//   sendMessage("toast", JSON.stringify([...arguments]));
+// }
+//
+// /**
+//  * 读取环境变量
+//  */
+// async function getEnv(key) {
+//   let res = await sendMessage("getEnv", JSON.stringify([key]));
+//   return JSON.parse(res);
+// }
+//
+// /**
+//  * 写入环境变量
+//  */
+// async function setEnv(key, value) {
+//   let res = await sendMessage("setEnv", JSON.stringify([key, value]));
+//   return JSON.parse(res);
+// }
