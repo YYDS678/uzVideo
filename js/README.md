@@ -1,8 +1,11 @@
 - [扩展说明](#扩展说明)
+  - [uzUtils.js 提供网络、存储 等功能](#uzutilsjs-提供网络存储-等功能)
 - [uzVideo(视频源) 扩展运行说明](#uzvideo视频源-扩展运行说明)
 - [uzHome(首页推荐) 扩展运行说明](#uzhome首页推荐-扩展运行说明)
+- [panTools(网盘工具)扩展运行说明](#pantools网盘工具扩展运行说明)
 - [加密说明](#加密说明)
 - [修改记录](#修改记录)
+    - [v1.6.00](#v1600)
     - [v1.5.50](#v1550)
     - [v1.5.40](#v1540)
     - [v1.4.00](#v1400)
@@ -17,6 +20,8 @@
 5. 不支持 `import` `export`
 6. 集成库可在 `uz3lib.js` 查看，如需添加其他库通用库请联系[机器人](https://t.me/uzVideoAppbot)
 7. 成对使用 `// ignore` uz 内部会忽略包裹的内容
+
+## uzUtils.js 提供网络、存储 等功能
 
 # uzVideo(视频源) 扩展运行说明
 
@@ -99,6 +104,17 @@ graph TD
 
   F[结束，点击视频 uz 开始搜索]
 
+```
+
+# panTools(网盘工具)扩展运行说明
+
+1. 固定实例名称为 `uzPanToolsInstance`
+2. uz 运行时仅存在一个网盘工具，请尽量整合所有的解析在 PanTools
+3. 流程图
+
+```mermaid
+graph TD
+A[开始] --> B[uz 调用 getShareVideos 获取视频列表] --> C[uz 调用 getPlayInfo 获取播放信息] --> D[结束]
 
 ```
 
@@ -112,6 +128,14 @@ graph TD
 6. 验证相关代码请见 `verifyServer.js` 请注意修改 `salt` 及 `sid` 验证逻辑。
 
 # 修改记录
+
+### v1.6.00
+
+1. `VideoDetail` 去除 `quarkUrl` 新增 `panUrls` 网盘分享链接列表
+
+2. `WebApiBase`、`HomeTabModel` 新增 `uzTag` 字段用于存取环境变量，请勿修改值
+3. 新增 `getEnv(uzTag, key)` 函数用于读取环境变量
+4. 新增 `setEnv(uzTag, key, value, summary)` 用于新增或更新环境变量
 
 ### v1.5.50
 

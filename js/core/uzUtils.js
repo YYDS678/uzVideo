@@ -52,6 +52,49 @@ class UZUtils {
   }
 
   /**
+   * 计算最长公共子串
+   * @param {string} s1
+   * @param {string} s2
+   * @returns
+   */
+  static lcs(s1, s2) {
+    const m = s1.length,
+      n = s2.length;
+    const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
+    let maxLength = 0,
+      endIndex = 0;
+
+    for (let i = 1; i <= m; i++) {
+      for (let j = 1; j <= n; j++) {
+        if (s1[i - 1] === s2[j - 1]) {
+          dp[i][j] = dp[i - 1][j - 1] + 1;
+          if (dp[i][j] > maxLength) {
+            maxLength = dp[i][j];
+            endIndex = i - 1;
+          }
+        }
+      }
+    }
+
+    return s1.substring(endIndex - maxLength + 1, endIndex + 1);
+  }
+
+  /**
+   * 查找元素在数组中的位置
+   * @param {Array} list
+   * @param {string} element
+   * @returns
+   */
+  static findIndex(list, element) {
+    for (let i = 0; i < list.length; i++) {
+      if (list[i] === element) {
+        return i;
+      }
+    }
+    return -1;
+  }
+
+  /**
    * 用于在 uz 扩展调试模式中展示 log 信息
    */
   static debugLog() {
@@ -67,14 +110,21 @@ class ProData {
   constructor() {
     this.error = "";
     this.data;
+
     /**
      * @type {object} 响应头
      */
     this.headers;
+
     /**
      * @type {number} 状态码
      */
     this.code;
+
+    /**
+     * @type {boolean} 是否成功
+     */
+    this.ok = () => this.code === 200;
   }
 }
 
@@ -104,25 +154,31 @@ async function req(url, options) {
   return pro;
 }
 
-// /**
-//  * 展示 toast
-//  */
-// function toast() {
-//   sendMessage("toast", JSON.stringify([...arguments]));
-// }
-//
-// /**
-//  * 读取环境变量
-//  */
-// async function getEnv(key) {
-//   let res = await sendMessage("getEnv", JSON.stringify([key]));
-//   return JSON.parse(res);
-// }
-//
-// /**
-//  * 写入环境变量
-//  */
-// async function setEnv(key, value) {
-//   let res = await sendMessage("setEnv", JSON.stringify([key, value]));
-//   return JSON.parse(res);
-// }
+//MARK: - 环境变量(持久存储)
+/**
+ * 读取环境变量
+ * @param {string} uzTag 直接传入扩展的 uzTag ,请勿修改
+ * @param {string} key
+ * @returns {@Promise<string>}
+ */
+async function getEnv(uzTag, key) {
+  let res = await sendMessage(
+    "getEnv",
+    JSON.stringify({ uzTag: uzTag, key: key })
+  );
+  return res;
+}
+
+/**
+ * 写入环境变量
+ * @param {string} uzTag 直接传入扩展的 uzTag ,请勿修改
+ * @param {string} key
+ * @param {string} value
+ * @param {string} summary 描述，新增时建议传入。修改时不必传入
+ */
+async function setEnv(uzTag, key, value, summary) {
+  let res = await sendMessage(
+    "setEnv",
+    JSON.stringify({ uzTag: uzTag, key: key, value: value, summary: summary })
+  );
+}

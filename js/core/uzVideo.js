@@ -116,8 +116,11 @@ class VideoDetail {
     this.vod_content = "";
     // 地区
     this.vod_area = "";
-    // 夸克网盘链接 暂未实现
-    this.quarkUrl = "";
+    /**
+     * 网盘分享链接列表
+     * @type {string[]}
+     */
+    this.panUrls = [];
   }
 }
 
@@ -241,8 +244,18 @@ class UZSubclassVideoListArgs extends UZArgs {
  * 扩展基类
  */
 class WebApiBase {
-  // 网站主页
-  webSite = "";
+  constructor() {
+    /**
+     * 网站主页
+     **/
+    this.webSite = "";
+
+    /**
+     * 扩展运行标识 ** uzApp 运行时自动赋值，请勿修改 **
+     */
+    this.uzTag = "";
+  }
+
   /**
    * 异步获取分类列表的方法。
    * @param {UZArgs} args

@@ -79,14 +79,25 @@ class RepTabList {
 
 class HomeTabModel {
   constructor() {
-    // 当前分类的链接
+    /**
+     * 当前分类的链接
+     **/
     this.id = "";
-    // 分类名称
+
+    /**
+     * 分类名称
+     */
     this.name = "";
+
     /**
      * 是否是筛选列表
      */
     this.isFilter = false;
+
+    /**
+     * 扩展运行标识 ** uzApp 运行时自动赋值，请勿修改 **
+     */
+    this.uzTag = "";
   }
 }
 
