@@ -1,16 +1,9 @@
 [
   {
-    "name": "厂长视频",
-    "api": "https://ghp.ci/https://raw.githubusercontent.com/YYDS678/uzVideo/main/js/spider/changZhang20240614.js",
-    "instance": "changZhang20240614",
-    "webSite": "https://www.czzy77.com",
-    "remark": "部分视频不会解密，不支持搜索"
-  },
-  {
-      "name": "可可影视",
-      "api": "https://ghp.ci/https://raw.githubusercontent.com/YYDS678/uzVideo/main/js/spider/keke20240712.js",
-      "instance": "keke20240712",
-      "webSite": "https://www.keke12.com:51111",
-      "remark": ""
+    "name": "玩偶哥哥",
+    "api": "https://ghp.ci/https://raw.githubusercontent.com/YYDS678/uzVideo/main/js/spider/wogg.js",
+    "instance": "wogg20240929",
+    "webSite": "https://www.wogg.net/",
+    "remark": "网盘，搜索"
   }
 ]
