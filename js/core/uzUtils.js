@@ -154,7 +154,6 @@ async function req(url, options) {
   return pro;
 }
 
-//MARK: - 环境变量(持久存储)
 /**
  * 读取环境变量
  * @param {string} uzTag 直接传入扩展的 uzTag ,请勿修改
@@ -181,4 +180,12 @@ async function setEnv(uzTag, key, value, summary) {
     "setEnv",
     JSON.stringify({ uzTag: uzTag, key: key, value: value, summary: summary })
   );
+}
+
+/**
+ * 跳转到验证页面，自动保存cookie
+ * @param {string} url
+ **/
+async function goToVerify(url) {
+  await sendMessage("goToVerify", JSON.stringify({ url: url }));
 }

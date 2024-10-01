@@ -132,10 +132,10 @@ A[开始] --> B[uz 调用 getShareVideos 获取视频列表] --> C[uz 调用 get
 ### v1.6.00
 
 1. `VideoDetail` 去除 `quarkUrl` 新增 `panUrls` 网盘分享链接列表
-
 2. `WebApiBase`、`HomeTabModel` 新增 `uzTag` 字段用于存取环境变量，请勿修改值
 3. 新增 `getEnv(uzTag, key)` 函数用于读取环境变量
 4. 新增 `setEnv(uzTag, key, value, summary)` 用于新增或更新环境变量
+5. 新增 `goToVerify` 用于验证视频站，会自动保存 `cookie` 下次请求自动生效。
 
 ### v1.5.50
 
