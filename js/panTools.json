@@ -1,0 +1,5 @@
+{
+  "name": "UC、夸克 网盘解析工具",
+  "url": "https://ghp.ci/https://raw.githubusercontent.com/YYDS678/uzVideo-extensions/refs/heads/main/panTools/js/panTools.js",
+  "env": "UCCookie##用于播放UC网盘视频，请在网页获取UC网盘的Cookie&&夸克Cookie##用于播放Quark网盘视频，请在网页获取Quark网盘的Cookie"
+}
