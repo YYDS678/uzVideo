@@ -189,3 +189,12 @@ async function setEnv(uzTag, key, value, summary) {
 async function goToVerify(url) {
   await sendMessage("goToVerify", JSON.stringify({ url: url }));
 }
+
+/**
+ * toast 弹窗
+ * @param {string} msg 提示信息
+ * @param {number} duration 持续时间
+ **/
+function toast(msg, duration = 2) {
+  sendMessage("toast", JSON.stringify({ msg: msg, duration: duration }));
+}
