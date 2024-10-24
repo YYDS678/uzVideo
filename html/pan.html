@@ -5,53 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>导航</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-      }
-      .container {
-        background-color: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-      h1 {
-        color: #333;
-        text-align: center;
-      }
-      .links {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-      a {
-        text-decoration: none;
-        color: #007bff;
-        font-size: 18px;
-        padding: 10px;
-        border: 1px solid #007bff;
-        border-radius: 5px;
-        text-align: center;
-        transition: background-color 0.3s, color 0.3s;
-      }
-      a:hover {
-        background-color: #007bff;
-        color: white;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .links, .custom-link {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 18px;
+            padding: 10px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        .custom-link {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            font-size: 18px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>网盘导航</h1>
-      <div class="links">
-        <a href="https://drive.uc.cn/">UC 网盘</a>
-        <a href="https://pan.quark.cn">夸克网盘</a>
-      </div>
+        <h1>网盘导航</h1>
+        <div class="links">
+            <a href="https://drive.uc.cn/">UC 网盘</a>
+            <a href="https://pan.quark.cn">夸克网盘</a>
+        </div>
+        <div class="custom-link">
+            <input type="text" id="customUrl" placeholder="输入自定义网址">
+            <button onclick="goToCustomUrl()">跳转</button>
+        </div>
     </div>
+
+    <script>
+        function goToCustomUrl() {
+            const customUrl = document.getElementById('customUrl').value.trim();
+            if (customUrl) {
+                window.location.href = customUrl.startsWith('http') ? customUrl : 'https://' + customUrl;
+            }
+        }
+    </script>
   </body>
 </html>
