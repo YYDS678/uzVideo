@@ -1,9 +1,175 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-CN">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>uz影视 使用教程</title>
+        <title>uz影视 不完全使用指南</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            .section-header {
+                border-bottom: 2px solid #4a5568;
+                padding-bottom: 0.5rem;
+                margin-bottom: 1rem;
+            }
+            .sub-header {
+                color: #2d3748;
+                font-weight: 600;
+            }
+            .code-block {
+                background-color: #f7fafc;
+                border-left: 4px solid #4299e1;
+                padding: 0.5rem;
+                margin: 1rem 0;
+            }
+        </style>
     </head>
+    <body class="bg-gray-100 text-gray-800 leading-normal p-4 md:p-8">
+        <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6 md:p-10">
+            <h1 class="text-3xl font-bold text-center mb-8 text-blue-700">uz影视 不完全使用指南</h1>
 
-    <body></body>
+            <div class="space-y-6">
+                <section>
+                    <h2 class="text-2xl section-header">添加数据</h2>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-xl sub-header mb-2">网页添加</h3>
+                            <p class="text-blue-600">
+                                <a href="https://uz-video-five.vercel.app/install.html" target="_blank" class="hover:underline">点击跳转网页，打不开需要挂梯</a>
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl sub-header mb-2">输入链接添加</h3>
+                            <div class="code-block">
+                                <p>
+                                    阿里|夸克|UC| VOD 源:
+                                    <a href="https://ghp.ci/https://raw.githubusercontent.com/YYDS678/uzVideo-extensions/refs/heads/main/uzAio.json" class="text-blue-500 break-all"
+                                        >https://ghp.ci/https://raw.githubusercontent.com/YYDS678/uzVideo-extensions/refs/heads/main/uzAio.json</a
+                                    >
+                                </p>
+                                <p>
+                                    阿里|夸克|UC|天翼|网盘源:
+                                    <a
+                                        href="https://ghproxy.cn/https://raw.githubusercontent.com/proversion2024/uz-extensions/refs/heads/master/uzAio.json"
+                                        class="text-blue-500 break-all"
+                                        >https://ghproxy.cn/https://raw.githubusercontent.com/proversion2024/uz-extensions/refs/heads/master/uzAio.json</a
+                                    >
+                                </p>
+                            </div>
+                            <p>uz 影视 -> 设置 -> 数据管理 -> 订阅 -> 添加 -> 分别输入上面链接 -> 确定(添加过程较慢)</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl section-header">其他设置</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-xl sub-header">推荐扩展</h3>
+                            <p>uz 影视 -> 设置 -> 数据管理 -> 推荐扩展 -> 点击扩展 -> 启用推荐主页 -> 重启 app</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl sub-header">网盘工具扩展</h3>
+                            <p>uz 影视 -> 设置 -> 数据管理 -> 网盘工具扩展 -> 点击扩展 -> 重启 app</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl section-header">Cookie 设置</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-xl sub-header">UC | 夸克 | 天翼</h3>
+                            <p>
+                                uz 影视 -> 设置 -> 数据管理 -> 环境变量 -> 点击右上角按钮 -> 点击 cookie 按钮 -> 选择 uc 或 夸克 -> 登录 -> 点击右上角 -> 点击登录的类型 -> 确定绑定
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl sub-header">阿里 (两个都要填！需要手动复制)</h3>
+                            <ol class="list-decimal pl-5">
+                                <li>
+                                    uz 影视 -> 设置 -> 数据管理 -> 环境变量 -> 点击右上角按钮 -> 点击 cookie 按钮 -> 选择 阿里 32 -> 扫码登录 -> 复制一串 数字与字母的混合文本 ->
+                                    返回 -> 点击 阿里 32 的那个笔 -> 粘贴 -> 确定
+                                </li>
+                                <li>
+                                    uz 影视 -> 设置 -> 数据管理 -> 环境变量 -> 点击右上角按钮 -> 点击 cookie 按钮 -> 选择 阿里 280 -> 扫码登录 -> 复制一串 数字与字母的混合文本 ->
+                                    返回 -> 点击 阿里 280 的那个笔 -> 粘贴 -> 确定
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl section-header">其他配置</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-xl sub-header">分享码</h3>
+                            <ul class="list-disc pl-5">
+                                <li>`6666` y 佬开发</li>
+                                <li>`1111` 采集站(添加两个即可)</li>
+                                <li>`2222` 采集站(18+ 自己看着加)</li>
+                                <li>添加过 all in one 无需再添加 `6666`</li>
+                                <li>uz 影视 -> 设置 -> 数据管理 -> 视频源 -> 小齿轮 -> 添加源列表 -> 输入 `6666` 或 `1111` 或 `2222` > 确定</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl sub-header">TMDB</h3>
+                            <ol class="list-decimal pl-5">
+                                <li><a href="https://www.ugnas.com/tutorial-detail/id-81.html" target="_blank" class="text-blue-600 hover:underline">点击查看注册教程</a></li>
+                                <li>应用信息任意填写，应用简介使用 英文 填写</li>
+                                <li>注册成功后</li>
+                                <li>uz 影视 -> 设置 -> 数据管理 -> The Movie Database -> 点击 Get TMDB Api Key 登录后 复制 key -> 返回 -> 粘贴 -> 返回 完成</li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl section-header">数据更新</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-xl sub-header">全部更新</h3>
+                            <p>uz 影视 -> 设置 -> 数据管理 -> 订阅 -> 点击右上角刷新按钮</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl sub-header">部分更新</h3>
+                            <p>uz 影视 -> 设置 -> 数据管理 -> 订阅 -> 点击要更新的链接</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl section-header">直播</h2>
+                    <ol class="list-decimal pl-5">
+                        <li>点击进入 <a href="https://yang-1989.eu.org" target="_blank" class="text-blue-600 hover:underline">YanG-1989 大佬</a> 分享页面</li>
+                        <li>点击 想要添加的直播类型 自动复制</li>
+                        <li>uz 影视 -> 设置 -> 数据管理 -> 直播源 -> + -> 输入任意名称 -> 输入刚刚复制的链接 -> 确定</li>
+                        <li>uz 影视 -> 点击底部小电视 -> 点击顶部小电视 -> 选择添加的直播源 -> 点击右上角切换展示分类</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl section-header">常见问题</h2>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>iOS15 以下不能看网盘</li>
+                        <li>安卓黑屏 播放设置 尝试 开启或关闭 安卓兼容模式</li>
+                        <li>安卓电视盒子 能不能用，请自己安装尝试。</li>
+                        <li>夸克画质糊，需要 VIP</li>
+                    </ul>
+                </section>
+            </div>
+
+            <footer class="mt-8 text-center text-gray-600 text-sm">
+                <p>uz影视</p>
+            </footer>
+        </div>
+    </body>
 </html>
