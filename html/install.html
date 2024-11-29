@@ -116,6 +116,18 @@
                 color: red;
                 margin-top: 10px;
             }
+
+            .copy-btn {
+                padding: 8px 15px;
+                background-color: #28a745;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                flex-shrink: 0;
+                min-width: 70px;
+                text-align: center;
+            }
         </style>
     </head>
 
@@ -216,21 +228,32 @@
                 window.location.href = finalUrl
             }
 
+            // 添加复制函数
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    alert('已复制到剪贴板');
+                }).catch(err => {
+                    console.error('复制失败:', err);
+                    alert('复制失败，请手动复制');
+                });
+            }
+
             window.onload = function () {
                 const container = document.getElementById('resourcesContainer')
                 configs.forEach((config) => {
                     const resourceGroup = document.createElement('div')
                     resourceGroup.className = 'resource-group'
                     resourceGroup.innerHTML = `
-          <div class="resource-header">
-            <div class="resource-title">${config.title}</div>
-            ${config.description ? `<div class="resource-description">${config.description}</div>` : ''}
-          </div>
-          <div class="button-row">
-            <button class="btn" onclick="installResource(false, '${config.resourceUrl}')">添加</button>
-            <button class="btn" onclick="installResource(true, '${config.resourceUrl}')">特殊添加</button>
-          </div>
-        `
+                        <div class="resource-header">
+                            <div class="resource-title">${config.title}</div>
+                            ${config.description ? `<div class="resource-description">${config.description}</div>` : ''}
+                        </div>
+                        <div class="button-row">
+                            <button class="copy-btn" onclick="copyToClipboard('${config.resourceUrl}')">复制链接</button>
+                            <button class="btn" onclick="installResource(false, '${config.resourceUrl}')">添加</button>
+                            <button class="btn" onclick="installResource(true, '${config.resourceUrl}')">特殊添加</button>
+                        </div>
+                    `
                     container.appendChild(resourceGroup)
                 })
             }
