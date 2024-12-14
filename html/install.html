@@ -128,6 +128,17 @@
                 min-width: 70px;
                 text-align: center;
             }
+            .help-btn {
+                padding: 8px 15px;
+                background-color: #ffc107;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                flex-shrink: 0;
+                min-width: 70px;
+                text-align: center;
+            }
         </style>
     </head>
 
@@ -156,12 +167,12 @@
         <script>
             const configs = [
                 {
-                    title: 'all in one',
+                    title: 'uz影视 all in one',
                     description: "整合大佬们开发的资源，感谢所有大佬",
                     resourceUrl: 'https://ghp.ci/https://raw.githubusercontent.com/YYDS678/uzVideo-extensions/refs/heads/main/uzAio.json',
                 },
                 {
-                    title: 'pv 大佬 all in one',
+                    title: 'pv大佬 all in one',
                     description: "<a href='https://github.com/proversion2024'>proversion2024</a> 大佬 all in one，感谢大佬",
                     resourceUrl: 'https://ghproxy.cn/https://raw.githubusercontent.com/proversion2024/uz-extensions/refs/heads/master/uzAio.json',
                 },
@@ -240,10 +251,16 @@
             // 添加复制函数
             function copyToClipboard(text) {
                 navigator.clipboard.writeText(text).then(() => {
-                    alert('已复制到剪贴板');
+                    alert('使用路径：uz影视 -> 设置 -> 数据管理 -> 订阅 -> +');
+                    alert('复制成功');
                 }).catch(err => {
-                    console.error('复制失败:', err);
-                    alert('复制失败，请手动复制');
+                    const textArea = document.createElement('textarea')
+                    textArea.value = text
+                    document.body.appendChild(textArea)
+                    textArea.select()
+                    document.execCommand('copy')
+                    document.body.removeChild(textArea)
+                    alert('复制失败，请手动复制：\n\n' + text + '\n\n使用路径：uz影视 -> 设置 -> 数据管理 -> 订阅 -> +');
                 });
             }
 
@@ -259,6 +276,7 @@
                         </div>
                         <div class="button-row">
                             <button class="copy-btn" onclick="copyToClipboard('${config.resourceUrl}')">复制链接</button>
+                            <button class="help-btn" onclick="window.open('https://uz-video-five.vercel.app/help.html')">使用教程</button>
                             <button class="btn" onclick="installResource(false, '${config.resourceUrl}')">添加</button>
                             <button class="btn" onclick="installResource(true, '${config.resourceUrl}')">特殊添加</button>
                         </div>
