@@ -24,7 +24,7 @@ uz 影视 不完全使用指南
 
 ## 输入链接添加
 
-[阿里|夸克|UC| VOD 源](https://ghp.ci/https://raw.githubusercontent.com/YYDS678/uzVideo-extensions/refs/heads/main/uzAio.json)
+[阿里|夸克|UC| VOD 源](https://gh-proxy.com/https://raw.githubusercontent.com/YYDS678/uzVideo-extensions/refs/heads/main/uzAio.json)
 
 [阿里|夸克|UC|天翼|网盘源](https://ghproxy.cn/https://raw.githubusercontent.com/proversion2024/uz-extensions/refs/heads/master/uzAio.json)
 

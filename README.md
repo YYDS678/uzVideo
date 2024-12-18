@@ -18,11 +18,11 @@ https://github.com/YYDS678/uzVideo-extensions
 
 uz 影视 -> 设置 -> 数据管理 -> 视频源 -> 小齿轮 -> 添加源列表 -> 输入链接 -> 确定
 
-[大佬扩展源](https://ghp.ci/https://raw.githubusercontent.com/Yswag/uzVideo/main/js/spider_sources.json)
+[大佬扩展源](https://gh-proxy.com/https://raw.githubusercontent.com/Yswag/uzVideo/main/js/spider_sources.json)
 
-[视频源](https://ghp.ci/https://raw.githubusercontent.com/YYDS678/uzVideo/main/video_sources_default.json)
+[视频源](https://gh-proxy.com/https://raw.githubusercontent.com/YYDS678/uzVideo/main/video_sources_default.json)
 
-[色色源](https://ghp.ci/https://raw.githubusercontent.com/YYDS678/uzVideo/main/video_sources_sese.json)
+[色色源](https://gh-proxy.com/https://raw.githubusercontent.com/YYDS678/uzVideo/main/video_sources_sese.json)
 
 ### 直播
 
