@@ -6,47 +6,24 @@
 
 - 频道 [t.me/uzvideoplay](https://t.me/uzvideoplay)
 - 群组 [t.me/uzVideoApp](https://t.me/uzVideoApp)
-- 下载 [123 云盘](https://www.123865.com/s/J0HtVv-QUUxA)
 
-### 扩展仓库
-
-https://github.com/YYDS678/uzVideo-extensions
-
-### 视频源扩展
-
-> 添加方式
-
-uz 影视 -> 设置 -> 数据管理 -> 视频源 -> 小齿轮 -> 添加源列表 -> 输入链接 -> 确定
-
-[大佬扩展源](https://github.moeyy.xyz/https://raw.githubusercontent.com/Yswag/uzVideo/main/js/spider_sources.json)
-
-[视频源](https://github.moeyy.xyz/https://raw.githubusercontent.com/YYDS678/uzVideo/main/video_sources_default.json)
-
-[色色源](https://github.moeyy.xyz/https://raw.githubusercontent.com/YYDS678/uzVideo/main/video_sources_sese.json)
-
-### 直播
-
-[IPTV 大佬 YanG-1989](https://github.com/YanG-1989/m3u)
-⚠️ 请注意需要设置 user-agent
-
-[IPTV 大佬 YueChan](https://github.com/YueChan/Live)
-
-### 编写 uz 可执行的扩展
+### 扩展仓库，编写扩展
 
 https://github.com/YYDS678/uzVideo-extensions
+
+### 将资源内置包内
+
+1. 将 `.ipa` `.apk` `.msix` 后缀改为 `.zip` 使用加压软件解压
+2. 找到 `uzAio.zip`
+
+   1. iOS `/Payload/Runner.app/Frameworks/App.framework/flutter_assets/uzAio/uzAio.zip`
+   2. Android `/assets/flutter_assets/uzAio/uzAio.zip`
+   3. Win `/data/flutter_assets/uzAio/uzAio.zip`
+
+3. 准备自己的源文件可在 `env.json` 直接将环境变量填写完整
+4. 将自己的源文件命名为 `uzAio.zip` 替换第二部找到的 `uzAio.zip`
+5. 将 第一步 解压后的文件重新压缩，并改为之前的后缀
+6. 安装后，打开 app 设置 -> 数据管理 -> + -> 读取应用内文件
+
 
 ### 如有任何相关问题联系：[机器人](https://t.me/uzVideoAppbot)
-
-### 采集站源格式
-
-```
-{
-    "api": "采集地址",
-    "name": "名称",
-    "remark": "备注",
-    "noHistory": false, // *不开启*历史记录 默认false(即开启历史记录)，用户可自行在 app 内修改
-    "userAgent": "", // 设置播放ua，用户可自行在 app 内修改
-    "isLock": false, // 是否上锁 默认false(即不上锁)，用户可自行在 app 内修改
-    "blockClassList": ["短剧"] // 屏蔽分类，用户可自行在 app 内修改
-  }
-```

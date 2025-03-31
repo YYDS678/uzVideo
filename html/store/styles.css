@@ -1,0 +1,242 @@
+/* 基础变量定义 */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9f9f9;
+  --text-primary: #333;
+  --text-secondary: #666;
+  --border-color: #ddd;
+  --link-color: #007bff;
+  --link-hover: #0056b3;
+  --btn-primary: #007bff;
+  --btn-success: #28a745;
+  --btn-warning: #ffc107;
+  --btn-secondary: #6c757d;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* 暗色主题 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --border-color: #404040;
+    --link-color: #4da3ff;
+    --link-hover: #80bdff;
+    --btn-primary: #4da3ff;
+    --btn-success: #3dae60;
+    --btn-warning: #ffd43b;
+    --btn-secondary: #8c8c8c;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* 基础样式 */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* 页面头部 */
+.page-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.page-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.page-description {
+  color: var(--text-secondary);
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+/* 资源卡片 */
+.resource-group {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-secondary);
+}
+
+.resource-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.resource-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.resource-description {
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+/* 按钮样式 */
+.button-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 15px;
+  background-color: var(--btn-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  min-width: 70px;
+  text-align: center;
+}
+
+.copy-btn {
+  background-color: var(--btn-success);
+}
+
+.help-btn {
+  background-color: var(--btn-warning);
+}
+
+/* 响应式布局 */
+@media (min-width: 768px) {
+  body {
+    max-width: 1200px;
+  }
+
+  #resourcesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  #resourcesContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+/* 下拉菜单 */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  padding: 8px 16px;
+  background-color: var(--btn-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+  min-width: 90px;
+  position: relative;
+  z-index: 2;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.dropdown-content {
+  position: absolute;
+  right: 100%;
+  top: 0;
+  background-color: var(--bg-secondary);
+  min-width: 160px;
+  box-shadow: 0 4px 16px var(--shadow-color);
+  z-index: 1;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-right: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(15px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.dropdown-content a {
+  color: var(--text-primary);
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-size: 0.95em;
+  border-radius: 4px;
+  margin: 2px;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--bg-primary);
+  transform: translateX(-3px);
+  color: var(--link-color);
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.dropdown:hover .dropdown-btn {
+  background-color: var(--link-hover);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* 移动端下拉菜单适配 */
+@media (max-width: 767px) {
+  .dropdown-content {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    margin-top: 8px;
+    margin-right: 0;
+    width: auto;
+    min-width: 200px;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 8px;
+  }
+
+  .dropdown-content a {
+    padding: 8px 12px;
+    text-align: center;
+    flex: 1;
+    margin: 0 4px;
+  }
+
+  .dropdown-content a:hover {
+    transform: translateY(-2px);
+  }
+}
