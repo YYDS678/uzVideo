@@ -16,14 +16,9 @@ export const MESSAGES = {
 // Resource Configs
 export const RESOURCE_CONFIGS = [
   {
-    title: 'uz影视 all in one 无代理',
-    description: '整合大佬们开发的资源，感谢所有大佬. <a href="https://github.com/Yswag">Yswag</a>  <a href="https://github.com/wangdepeng100">wangdepeng100</a>',
-    resourceUrl: 'https://raw.githubusercontent.com/YYDS678/uzVideo-extensions/refs/heads/main/uzAio.zip'
-  },
-  {
     title: 'uz影视 all in one',
     description: '整合大佬们开发的资源，感谢所有大佬. <a href="https://github.com/Yswag">Yswag</a>  <a href="https://github.com/wangdepeng100">wangdepeng100</a>',
-    resourceUrl: 'https://github.moeyy.xyz/https://raw.githubusercontent.com/YYDS678/uzVideo-extensions/refs/heads/main/uzAio.zip'
+    resourceUrl: 'https://raw.githubusercontent.com/YYDS678/uzVideo-extensions/refs/heads/main/uzAio.zip'
   },
   {
     title: 'pv大佬 all in one',
