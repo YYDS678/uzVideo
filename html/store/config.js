@@ -26,11 +26,6 @@ export const RESOURCE_CONFIGS = [
     resourceUrl: 'https://ghproxy.cn/https://raw.githubusercontent.com/proversion2024/uz-extensions/refs/heads/master/uzAio.json'
   },
   {
-    title: '网盘源',
-    description: '<a href="https://github.com/proversion2024">proversion2024</a>   大佬开发，感谢大佬',
-    resourceUrl: 'https://ghproxy.cn/https://raw.githubusercontent.com/proversion2024/uz-extensions/refs/heads/master/vod/vod.json'
-  },
-  {
     title: '采集站',
     description: '采集站资源，不需要添加太多两个够用',
     resourceUrl: 'https://github.moeyy.xyz/https://raw.githubusercontent.com/YYDS678/uzVideo/main/video_sources_default.json'
