@@ -1,0 +1,35 @@
+{
+  "code": 1,
+  "msg": "数据列表",
+  "page": 1,
+  "pagecount": 1,
+  "limit": "20",
+  "total": 1,
+  "list": [
+    {
+      "vod_id": 1,
+      "type_id": 1,
+      "vod_name": "bee",
+      "vod_pic": "https://i1.hdslb.com/bfs/archive/749ee5aa0cb813a9992da9af07e87c3bd44a558a.jpg",
+      "vod_actor": "暂无",
+      "vod_director": "暂无",
+      "vod_blurb": "暂无",
+      "vod_remarks": "演示",
+      "vod_year": "2024",
+      "vod_play_url": "bee$https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4#"
+    },
+    {
+      "vod_id": 2,
+      "type_id": 1,
+      "vod_name": "butterfly",
+      "vod_pic": "https://pic.rmb.bdstatic.com/bjh/3f110aa0b6f/250514/5f6ab3a910e27addf1a169ed7fed8db6.jpeg",
+      "vod_actor": "暂无",
+      "vod_director": "暂无",
+      "vod_blurb": "暂无",
+      "vod_remarks": "演示",
+      "vod_year": "2024",
+      "vod_play_url": "butterfly$https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4#"
+    }
+  ],
+  "class": [{ "type_id": 1, "type_pid": 0, "type_name": "昆虫" }]
+}
